@@ -14,7 +14,15 @@ export const createUserVal = [
         .isLength({min: 6})
 ];
 
-
+export const loginUserVal = [
+    check("user_email")
+        .not()
+        .isEmpty()
+        .isLength({min: 4, max: 150})
+        .normalizeEmail(),
+    check("user_password")
+        .isLength({min: 6})    
+];
 
 
 
