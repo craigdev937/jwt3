@@ -1,0 +1,15 @@
+:root {
+    --gra: #282c34;
+    --blu: #2e3a5c;
+    --ora: #f7836c;
+    --whi: #fff;
+    --bla: #000;
+}
+
+body {
+    background-color: var(--gra);
+    color: var(--whi);
+}
+
+
+

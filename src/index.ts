@@ -4,6 +4,8 @@ import helmet from "helmet";
 import logger from "morgan";
 import { trim } from "./middleware/trim";
 import { userRt } from "./routes/userRt";
+import { dashRt } from "./routes/dashRt";
+import { todoRt } from "./routes/todoRt";
 
 (async () => {
     const app: express.Application = express();
@@ -30,6 +32,8 @@ import { userRt } from "./routes/userRt";
 
     // Routes and Port
     app.use("/api", userRt);
+    app.use("/api/dash", dashRt);
+    app.use("/api/todo", todoRt);
     const port = process.env.PORT || 9000;
     app.listen(port, () => {
         console.log(`Server: http://localhost:${port}`);
